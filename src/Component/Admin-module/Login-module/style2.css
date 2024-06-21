@@ -1,0 +1,24 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blue-side {
+  flex: 1; /* Take up 50% of the container */
+  background-color: #2196f6;
+  margin: -2%;
+}
+
+.white-side {
+  flex: 1; /* Take up 50% of the container */
+  background-color: white;
+  margin-left: 4%;
+  margin-right: 5%;
+}
+
+.Admin-image {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 27%;
+}

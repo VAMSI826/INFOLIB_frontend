@@ -1,0 +1,13 @@
+.admin-head {
+  background-image: url("https://img.freepik.com/free-vector/library-with-bookcases-ladder-chair-lamp_107791-3023.jpg");
+  height: 25vh;
+  color: rgb(247, 243, 243);
+  display: flex;
+  margin-left: -10%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin-title {
+  margin-left: 10%;
+}

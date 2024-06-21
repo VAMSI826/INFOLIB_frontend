@@ -1,0 +1,95 @@
+.student-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 3%;
+}
+.student-head {
+  background-image: url("https://i.pinimg.com/736x/e8/0b/64/e80b64683c82f3a4d8f4f442af039046.jpg");
+  height: 35vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.student-head h1 {
+  font-family: "BARABARAFINALRegular";
+  font-size: 50px;
+  font-weight: bolder;
+  opacity: 200%;
+}
+.input-wrapper {
+  background-color: white;
+  width: 30%;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0px 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  display: flex;
+  align-items: center;
+}
+.input-wrapper input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 10px;
+}
+input:focus {
+  outline: none;
+}
+.input-wrapper i {
+  color: royalblue;
+}
+.card-s {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 60px 10px 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.title-student {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.card-body {
+  font-size: 16px;
+}
+.student-content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  padding: 1% 7% 0% 2.5%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.student-data {
+  text-align: left;
+}
+.card-content p {
+  text-align: left;
+}
+th,
+td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.stud-intro {
+  text-align: justify;
+  font-size: 1.25rem;
+  margin: 3%;
+  margin-right: 8%;
+}

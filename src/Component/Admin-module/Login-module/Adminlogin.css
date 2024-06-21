@@ -1,0 +1,14 @@
+.login {
+  width: 100%;
+  height: 100%;
+}
+.form-body {
+  height: 87.5vh;
+}
+
+.pass-input {
+  gap:15px;
+}
+.icon-eye{
+  margin-left: -50px;
+}

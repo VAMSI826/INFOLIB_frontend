@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BARABARA-FINAL';
+    src: url('BARABARAFINALRegular.eot');
+    src: url('BARABARAFINALRegular.eot?#iefix') format('embedded-opentype'),
+        url('BARABARAFINALRegular.woff2') format('woff2'),
+        url('BARABARAFINALRegular.woff') format('woff'),
+        url('BARABARAFINALRegular.ttf') format('truetype'),
+        url('BARABARAFINALRegular.svg#BARABARAFINALRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

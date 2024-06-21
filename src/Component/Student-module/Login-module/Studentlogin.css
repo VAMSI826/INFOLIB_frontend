@@ -1,0 +1,33 @@
+.login {
+  width: 100%;
+  height: 100%;
+}
+.form-body {
+  height: 87.5vh;
+}
+.title-student {
+  font-family: BARABARAFINALRegular;
+}
+.form-in{
+  gap:25px;
+  align-items: center;
+  justify-content: center;
+}
+.stuicon-eye{
+  margin-left: -60px;
+}
+@media screen and (max-width: 740px) {
+  .container{
+    width:100%;
+    height:100%;
+  }
+  .login-card {
+    margin-bottom: 8%;
+    padding: 5%;
+  }
+  .form-body {
+    height: 100vh;
+    width:100%;
+    margin-bottom: 20%;
+  }
+}

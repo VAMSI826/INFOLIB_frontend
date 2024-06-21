@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.book-container {
+  max-width: 100%;
+  max-height: 100%;
+}
+.head {
+  background-image: url("https://img.freepik.com/premium-vector/seamless-pattern-with-paper-books-home-library-book-stacks-glasses-doodle-style-hand-drawn-illustration_192280-123.jpg?w=360");
+  height: 35vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head h1 {
+  font-family: "BARABARAFINALRegular";
+  font-size: 50px;
+  font-weight: bolder;
+  opacity: 200%;
+}
+.stud-book-content {
+  margin-left: 80px;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+.input-wrapper {
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding: 0px 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  display: flex;
+  align-items: center;
+}
+.input-wrapper input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 10px;
+}
+input:focus {
+  outline: none;
+}
+.input-wrapper i {
+  color: royalblue;
+}
+.add {
+  display: flex;
+  margin: 20px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 1rem;
+  width: 20%;
+}
+.add-button {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: black;
+}
+.add-button i {
+  font-size: 28px;
+  color: white;
+}
+.add h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 3/4;
+}
+@media screen and (max-width: 740px) {
+  .book-container {
+    max-height: 100%;
+    margin-top: 10%;
+  }
+
+  body {
+    min-height: 100vh;
+    width: 50vw;
+    overflow-x: hidden;
+  }
+  input {
+    width: 80%; /* Reduce width for smaller screens */
+  }
+  input::placeholder {
+    font-size: 14px;
+  }
+}

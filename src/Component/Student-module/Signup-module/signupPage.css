@@ -1,0 +1,27 @@
+.container-fluid {
+  display: inline-flex;
+  height: 100vh; /* Adjust the height as needed */
+  position: fixed;
+}
+
+.blue-sided {
+  flex: 1; /* Take up 50% of the container */
+  margin: -2%;
+}
+
+.white-sided {
+  flex: 1; /* Take up 50% of the container */
+  background-color: white;
+  margin-left: 4%;
+}
+.sign-image {
+  width: 120%;
+  height: 120%;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    display: block;
+  }
+}
