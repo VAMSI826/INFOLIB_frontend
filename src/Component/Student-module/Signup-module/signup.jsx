@@ -20,7 +20,7 @@ export default function Signup() {
       password: data.password,
     };
     await axios
-      .post(`${base_url}/user/signup`, userInfo)
+      .post(`${process.env.base_url}/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

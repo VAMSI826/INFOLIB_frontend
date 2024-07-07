@@ -13,7 +13,7 @@ export default function Profile() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res = await axios.get(`${base_url}/borrowed/getBorrow`);
+        const res = await axios.get(`${process.env.base_url}/borrowed/getBorrow`);
         setBorrowed(res.data);
       } catch (error) {
         console.log(error);

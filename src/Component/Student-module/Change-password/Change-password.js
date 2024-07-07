@@ -29,7 +29,7 @@ export default function Changepassword() {
     };
     console.log(userInfo);
     await axios
-      .post(`${base_url}/user/updatepass`, {
+      .post(`${process.env.base_url}/user/updatepass`, {
         data: userInfo,
       })
       .then((res) => {

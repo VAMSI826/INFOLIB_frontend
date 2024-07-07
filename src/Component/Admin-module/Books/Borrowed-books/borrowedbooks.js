@@ -12,8 +12,8 @@ export default function Borrowedbooks() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res1 = await axios.get(`${base_url}/borrowed/getBorrow`);
-        const res2 = await axios.get(`${base_url}/book/bookdetails`);
+        const res1 = await axios.get(`${process.env.base_url}/borrowed/getBorrow`);
+        const res2 = await axios.get(`${process.env.base_url}/book/bookdetails`);
         setBorrowed(res1.data);
         setBook(res2.data);
       } catch (error) {

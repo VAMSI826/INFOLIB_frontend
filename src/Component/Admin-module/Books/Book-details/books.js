@@ -13,7 +13,7 @@ export default function Books() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get(`${base_url}/book/bookdetails`);
+        const res = await axios.get(`${process.env.base_url}/book/bookdetails`);
         setBook(res.data);
       } catch (error) {
         console.log(error);

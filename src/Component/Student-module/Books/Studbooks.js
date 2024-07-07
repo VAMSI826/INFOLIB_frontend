@@ -14,7 +14,7 @@ console.log(studata);
 
 const addSlot = async (uucms, barcode) => {
   await axios
-    .post(`${base_url}/slot/addslot`, {
+    .post(`${process.env.base_url}/slot/addslot`, {
       data: { uucms, barcode },
     })
     .then((res) => {
@@ -35,7 +35,7 @@ export default function StudBooks() {
   useEffect(() => {
     const getStudBook = async () => {
       try {
-        const res = await axios.get(`${base_url}/book/bookdetails`);
+        const res = await axios.get(`${process.env.base_url}/book/bookdetails`);
         setBookDetails(res.data);
       } catch (error) {
         console.log(error);

@@ -13,9 +13,9 @@ export default function Student() {
   useEffect(() => {
     const getStud = async () => {
       try {
-        const res1 = await axios.get(`${base_url}/user/getStud`);
+        const res1 = await axios.get(`${process.env.base_url}/user/getStud`);
         setStudent(res1.data);
-        const res2 = await axios.get(`${base_url}/borrowed/getBorrow`);
+        const res2 = await axios.get(`${process.env.base_url}/borrowed/getBorrow`);
         setBorrowed(res2.data);
       } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ export default function Student() {
   });
   const handleDelete = async (uucms, title) => {
     await axios
-      .delete(`${base_url}/borrowed/delbook`, {
+      .delete(`${process.env.base_url}/borrowed/delbook`, {
         data: { uucms, title },
       })
       .then((res) => {
@@ -48,7 +48,7 @@ export default function Student() {
 
   const handlerenew = async (uucms, title) => {
     await axios
-      .delete(`${base_url}/borrowed/renewbook`, {
+      .delete(`${process.env.base_url}/borrowed/renewbook`, {
         data: { uucms, title },
       })
       .then((res) => {

@@ -17,7 +17,7 @@ export default function Studentadd() {
       semester: data.semester,
     };
     await axios
-      .post(`${base_url}/Student/register`, studentInfo)
+      .post(`${process.env.base_url}/Student/register`, studentInfo)
       .then((res) => {
         if (res.data) {
           toast.success(res.data.message);

@@ -19,7 +19,7 @@ export default function Studentlogin() {
       password: data.password,
     };
     await axios
-      .post(`${base_url}/user/login`, userInfo)
+      .post(`${process.env.base_url}/user/login`, userInfo)
       .then((res) => {
         if (res.data) {
           toast.success("Login Successfull");

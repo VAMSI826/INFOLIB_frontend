@@ -24,7 +24,7 @@ export default function Adminlogin() {
       password: data.password,
     };
     await axios
-      .post(`${base_url}/Admin/Adminlogin`, admininfo)
+      .post(`${process.env.base_url}/Admin/Adminlogin`, admininfo)
       .then((res) => {
         if (res.data) {
           toast.success("Login Successfull");

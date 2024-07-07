@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar/sidebar";
 import "./adminhome.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { base_url } from "../../../urls.js";
+
 
 export default function Home() {
   const [book, setBook] = useState([]);
@@ -15,13 +15,13 @@ export default function Home() {
   useEffect(() => {
     const get = async () => {
       try {
-        const res1 = await axios.get(`${base_url}/book/bookdetails`);
+        const res1 = await axios.get(`${process.env.base_url}/book/bookdetails`);
         setBook(res1.data);
-        const res2 = await axios.get(`${base_url}/user/getStud`);
+        const res2 = await axios.get(`${process.env.base_url}/user/getStud`);
         setStud(res2.data);
-        const res3 = await axios.get(`${base_url}/borrowed/getBorrow`);
+        const res3 = await axios.get(`${process.env.base_url}/borrowed/getBorrow`);
         setBorrowed(res3.data);
-        const res4 = await axios.get(`${base_url}/slot/slots`);
+        const res4 = await axios.get(`${process.env.base_url}/slot/slots`);
         setSlots(res4.data);
       } catch (error) {
         console.log(error);

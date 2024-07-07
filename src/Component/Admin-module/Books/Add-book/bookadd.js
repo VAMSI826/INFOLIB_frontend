@@ -26,7 +26,7 @@ export default function Bookadd() {
       category: data.category,
     };
     await axios
-      .post(`${base_url}/book/addbook`, bookInfo)
+      .post(`${process.env.base_url}/book/addbook`, bookInfo)
       .then((res) => {
         if (res.data) {
           toast.success(res.data.message);

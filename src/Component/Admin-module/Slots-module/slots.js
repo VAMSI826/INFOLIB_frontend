@@ -13,7 +13,7 @@ export default function Slots() {
   useEffect(() => {
     const getslots = async () => {
       try {
-        const res = await axios.get(`${base_url}/slot/slots`);
+        const res = await axios.get(`${process.env.base_url}/slot/slots`);
         setSlots(res.data.reverse());
       } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ export default function Slots() {
 
   const handleSlot = async (uucms, barcode) => {
     await axios
-      .post(`${base_url}/borrowed/borrowedbook`, {
+      .post(`${process.env.base_url}/borrowed/borrowedbook`, {
         data: { uucms, barcode },
       })
       .then((res) => {
@@ -49,7 +49,7 @@ export default function Slots() {
   useEffect(() => {
     const delslots = async () => {
       try {
-        const res = await axios.delete(`${base_url}/slot/deleteoldslots`);
+        const res = await axios.delete(`${process.env.base_url}/slot/deleteoldslots`);
       } catch (error) {
         console.log(error);
       }

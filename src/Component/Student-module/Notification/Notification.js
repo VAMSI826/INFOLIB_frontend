@@ -11,7 +11,7 @@ export default function Notification() {
   useEffect(() => {
     const getnotification = async () => {
       try {
-        const res = await axios.get(`${base_url}/notif/getnotif`);
+        const res = await axios.get(`${process.env.base_url}/notif/getnotif`);
         setnotification(res.data.reverse());
         console.log(notification);
       } catch (error) {
