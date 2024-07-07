@@ -29,7 +29,7 @@ export default function Books() {
 
   const handleDelete = async (barcode) => {
     await axios
-      .delete(`https://infolib-9o87.vercel.app/book/delbook`, {
+      .delete(`https://infolib-backend.onrender.com/book/delbook`, {
         data: { barcode }, // Sending the barcode in the request body
       })
       .then((res) => {
