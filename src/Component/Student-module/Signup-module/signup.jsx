@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { base_url } from "../../../urls";
 
 export default function Signup() {
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     const userInfo = {
       name: data.name,

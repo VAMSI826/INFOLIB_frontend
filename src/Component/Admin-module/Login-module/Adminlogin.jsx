@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import { base_url } from "../../../urls.js";
+import { base_url } from "../../../urls";
 
 export default function Adminlogin() {
   const navigate = useNavigate();
