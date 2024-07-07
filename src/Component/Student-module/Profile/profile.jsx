@@ -12,9 +12,7 @@ export default function Profile() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res = await axios.get(
-          `https://infolib-backend.onrender.com/borrowed/getBorrow`
-        );
+        const res = await axios.get("https://infolib-backend.onrender.com/borrowed/getBorrow");
         setBorrowed(res.data);
       } catch (error) {
         console.log(error);
@@ -57,7 +55,7 @@ export default function Profile() {
                     <p class="text-muted mb-4">{studata.userid}</p>
                   </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-xl-8">
                   <div class="card mb-4">
                     <div class="card-body">
                       <div class="row">
@@ -107,7 +105,6 @@ export default function Profile() {
                     </div>
                   </div>
                 </div>
-
                 {studata.borrowedbookscnt === 0 ? (
                   <div
                     style={{ width: "80rem" }}
