@@ -11,7 +11,7 @@ const Studsidebar = () => {
   const handleLogout = () => {
     toast.success("Logout Successful");
     setTimeout(() => {
-      window.location.replace("/Student-login");
+      window.location.replace("/");
       localStorage.clear();
     }, 800);
   };
@@ -78,7 +78,6 @@ const Studsidebar = () => {
               <i className="fas fa-sign-out nav-link-icon"></i>
             </Tooltip>
             <span className="nav-link-name">Logout</span>
-                     
           </Link>
         </nav>
       </aside>
