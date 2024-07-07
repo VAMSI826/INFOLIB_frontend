@@ -12,7 +12,9 @@ export default function Profile() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res = await axios.get(`https://infolib-backend.onrender.com/borrowed/getBorrow`);
+        const res = await axios.get(
+          `https://infolib-backend.onrender.com/borrowed/getBorrow`
+        );
         setBorrowed(res.data);
       } catch (error) {
         console.log(error);
@@ -32,7 +34,7 @@ export default function Profile() {
         <section style={{ backgroundColor: "#eee" }}>
           <div class="container profile py-5 mt-5">
             <div class="col">
-            <div class="col-lg-8">
+              <div class="col-lg-8">
                 <div class="card mb-4">
                   <div class="card-body">
                     <div class="row">
@@ -79,7 +81,6 @@ export default function Profile() {
                         <p class="text-muted mb-0">{studata.phone}</p>
                       </div>
                     </div>
-                  </div>
                   </div>
                 </div>
                 {studata.borrowedbookscnt === 0 ? (
