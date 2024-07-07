@@ -39,7 +39,7 @@ function FirstPage() {
       </div>
       <div className="second-half">
         <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkdM66v-3ApcnNx8hxlRAG1J18B5q85O-16fFr6sGdMGQWjzlUCLUgigIC7RMBBuq0JRwgbO5rEuEI3_BZ00ed8eiElPvy02C9GWFWJeyUB5feQM_ikQsxpXVo3T9VndFxj3VxGxt9FRr49ykuMRZ9YW7xn8VrvQHU7v3tyj4Q3k7rvBaLj4Nmgo_iZLVk/s320/ppl.png"
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkdM66v-3ApcnNx8hxlRAG1J18B5q85O-16fFr6sGdMGQWjzlUCLUgigIC7RMBBuq0JRwgbO5rEuEI3_BZ00ed8eiElPvy02C9GWFWJeyUB5feQM_ikQsxpXVo3T9VndFxj3VxGxt9FRr49ykuMRZ9YW7xn8VrvQHU7v3tyj4Q3k7rvBaLj4Nmgo_iZLVk/w622-h581/ppl.png"
           class="right-image"
         ></img>
       </div>

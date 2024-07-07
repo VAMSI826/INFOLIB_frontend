@@ -15,9 +15,12 @@ export default function ForgotPassword() {
 
   const onSubmitEmail = async (data) => {
     try {
-      const response = await axios.post(`https://infolib-backend.onrender.com/api/auth/send-otp`, {
-        email: data.email,
-      });
+      const response = await axios.post(
+        `https://infolib-backend.onrender.com/api/auth/send-otp`,
+        {
+          email: data.email,
+        }
+      );
       toast.success(response.data.message);
       setEmail(data.email);
       setCurrentStep(2);
@@ -28,10 +31,13 @@ export default function ForgotPassword() {
 
   const onSubmitOTP = async (data) => {
     try {
-      const response = await axios.post(`https://infolib-backend.onrender.com/api/auth/verify-otp`, {
-        email: data.email,
-        otp: data.first + data.second + data.third + data.fourth,
-      });
+      const response = await axios.post(
+        `https://infolib-backend.onrender.com/api/auth/verify-otp`,
+        {
+          email: data.email,
+          otp: data.first + data.second + data.third + data.fourth,
+        }
+      );
 
       toast.success(response.data.message);
       localStorage.setItem("resetToken", response.data.token);
@@ -51,11 +57,14 @@ export default function ForgotPassword() {
         return;
       }
 
-      const response = await axios.post(`https://infolib-backend.onrender.com/api/auth/reset-password`, {
-        email: data.email,
-        newPassword: data.newPassword,
-        token: localStorage.getItem("resetToken"),
-      });
+      const response = await axios.post(
+        `https://infolib-backend.onrender.com/api/auth/reset-password`,
+        {
+          email: data.email,
+          newPassword: data.newPassword,
+          token: localStorage.getItem("resetToken"),
+        }
+      );
       toast.success(response.data.message);
     } catch (error) {
       toast.error("Error resetting password:", error.response.data.message);
@@ -86,7 +95,7 @@ export default function ForgotPassword() {
                   <div className="text-center">
                     <a href="#!">
                       <img
-                        src="http://surl.li/tnzda"
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQMKwzp2krDtu-kCPe_UstrYpbU9LFLWBW6kTPU5lvJtuED0jucpFr3dbQUCEyKBEAYzUCgrtiiVKdSPmfaaVMNDKfFGvAq0wrZRAqPRtnhNnPYRi4UeSmxsdiRe68I2IwVzjfCLYqT6F6VgGqb-7VvOpJSCzE6_5ZCM4dv-3lgOCI4T7gpCCHI8jTAdpf/s1600/tree.png"
                         alt="BootstrapBrain Logo"
                         width="175"
                         height="175"
