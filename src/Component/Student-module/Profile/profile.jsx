@@ -12,7 +12,9 @@ export default function Profile() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res = await axios.get("https://infolib-backend.onrender.com/borrowed/getBorrow");
+        const res = await axios.get(
+          "https://infolib-backend.onrender.com/borrowed/getBorrow"
+        );
         setBorrowed(res.data);
       } catch (error) {
         console.log(error);
@@ -31,7 +33,7 @@ export default function Profile() {
       <Box sx={{ flexGrow: 1, m: -10 }}>
         <section style={{ backgroundColor: "#eee" }}>
           <div class="container profile py-5 mt-5">
-            <div class="col">
+            <div class="row">
               <div class="col-lg-4 mb-4">
                 <div class="card mb-4 ">
                   <div class="card-body text-center">
@@ -55,56 +57,7 @@ export default function Profile() {
                     <p class="text-muted mb-4">{studata.userid}</p>
                   </div>
                 </div>
-                <div class="col-xl-8">
-                  <div class="card mb-4">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Full Name</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">{studata.name}</p>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Course</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">{studata.course}</p>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Semester</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">{studata.semester}</p>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Email ID</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">{studata.email}</p>
-                        </div>
-                      </div>
-                      <hr />
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <p class="mb-0">Phone Number</p>
-                        </div>
-                        <div class="col-sm-9">
-                          <p class="text-muted mb-0">{studata.phone}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 {studata.borrowedbookscnt === 0 ? (
                   <div
                     style={{ width: "80rem" }}
@@ -148,6 +101,56 @@ export default function Profile() {
                     </div>
                   ))
                 )}
+              </div>
+              <div class="col-xl-8">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Full Name</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0">{studata.name}</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Course</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0">{studata.course}</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Semester</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0">{studata.semester}</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Email ID</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0">{studata.email}</p>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Phone Number</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <p class="text-muted mb-0">{studata.phone}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
