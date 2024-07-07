@@ -15,16 +15,20 @@ export default function Home() {
     const get = async () => {
       try {
         const res1 = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/book/bookdetails`
+          `https://infolib-backend.onrender.com/book/bookdetails`
         );
         setBook(res1.data);
-        const res2 = await axios.get(`${process.env.REACT_APP_BASE_URL}/user/getStud`);
+        const res2 = await axios.get(
+          `https://infolib-backend.onrender.com/user/getStud`
+        );
         setStud(res2.data);
         const res3 = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/borrowed/getBorrow`
+          `https://infolib-backend.onrender.com/borrowed/getBorrow`
         );
         setBorrowed(res3.data);
-        const res4 = await axios.get(`${process.env.REACT_APP_BASE_URL}/slot/slots`);
+        const res4 = await axios.get(
+          `https://infolib-backend.onrender.com/slot/slots`
+        );
         setSlots(res4.data);
       } catch (error) {
         console.log(error);

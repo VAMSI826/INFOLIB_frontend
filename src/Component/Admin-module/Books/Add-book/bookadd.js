@@ -26,7 +26,7 @@ export default function Bookadd() {
       category: data.category,
     };
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/book/addbook`, bookInfo)
+      .post(`https://infolib-backend.onrender.com/book/addbook`, bookInfo)
       .then((res) => {
         if (res.data) {
           toast.success(res.data.message);

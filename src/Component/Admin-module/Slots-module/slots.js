@@ -13,7 +13,7 @@ export default function Slots() {
   useEffect(() => {
     const getslots = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/slot/slots`);
+        const res = await axios.get(`https://infolib-backend.onrender.com/slot/slots`);
         setSlots(res.data.reverse());
       } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ export default function Slots() {
 
   const handleSlot = async (uucms, barcode) => {
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/borrowed/borrowedbook`, {
+      .post(`https://infolib-backend.onrender.com/borrowed/borrowedbook`, {
         data: { uucms, barcode },
       })
       .then((res) => {
@@ -49,7 +49,7 @@ export default function Slots() {
   useEffect(() => {
     const delslots = async () => {
       try {
-        const res = await axios.delete(`${process.env.REACT_APP_BASE_URL}/slot/deleteoldslots`);
+        const res = await axios.delete(`https://infolib-backend.onrender.com/slot/deleteoldslots`);
       } catch (error) {
         console.log(error);
       }

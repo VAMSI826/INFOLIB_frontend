@@ -19,7 +19,7 @@ export default function Studentlogin() {
       password: data.password,
     };
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/user/login`, userInfo)
+      .post(`https://infolib-backend.onrender.com/user/login`, userInfo)
       .then((res) => {
         if (res.data) {
           toast.success("Login Successfull");

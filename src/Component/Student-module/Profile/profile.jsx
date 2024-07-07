@@ -12,7 +12,7 @@ export default function Profile() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/borrowed/getBorrow`);
+        const res = await axios.get(`https://infolib-backend.onrender.com/borrowed/getBorrow`);
         setBorrowed(res.data);
       } catch (error) {
         console.log(error);

@@ -11,7 +11,7 @@ export default function Notification() {
   useEffect(() => {
     const getnotification = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/notif/getnotif`);
+        const res = await axios.get(`https://infolib-backend.onrender.com/notif/getnotif`);
         setnotification(res.data.reverse());
         console.log(notification);
       } catch (error) {

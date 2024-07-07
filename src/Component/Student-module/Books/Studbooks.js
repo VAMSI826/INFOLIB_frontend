@@ -13,7 +13,7 @@ console.log(studata);
 
 const addSlot = async (uucms, barcode) => {
   await axios
-    .post(`${process.env.REACT_APP_BASE_URL}/slot/addslot`, {
+    .post(`https://infolib-backend.onrender.com/slot/addslot`, {
       data: { uucms, barcode },
     })
     .then((res) => {
@@ -35,7 +35,7 @@ export default function StudBooks() {
     const getStudBook = async () => {
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/book/bookdetails`
+          `https://infolib-backend.onrender.com/book/bookdetails`
         );
         setBookDetails(res.data);
       } catch (error) {

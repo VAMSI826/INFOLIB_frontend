@@ -29,7 +29,7 @@ export default function Changepassword() {
     };
     console.log(userInfo);
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/user/updatepass`, {
+      .post(`https://infolib-backend.onrender.com/user/updatepass`, {
         data: userInfo,
       })
       .then((res) => {

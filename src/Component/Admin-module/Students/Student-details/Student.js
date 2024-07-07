@@ -13,9 +13,9 @@ export default function Student() {
   useEffect(() => {
     const getStud = async () => {
       try {
-        const res1 = await axios.get(`${process.env.REACT_APP_BASE_URL}/user/getStud`);
+        const res1 = await axios.get(`https://infolib-backend.onrender.com/user/getStud`);
         setStudent(res1.data);
-        const res2 = await axios.get(`${process.env.REACT_APP_BASE_URL}/borrowed/getBorrow`);
+        const res2 = await axios.get(`https://infolib-backend.onrender.com/borrowed/getBorrow`);
         setBorrowed(res2.data);
       } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ export default function Student() {
   });
   const handleDelete = async (uucms, title) => {
     await axios
-      .delete(`${process.env.REACT_APP_BASE_URL}/borrowed/delbook`, {
+      .delete(`https://infolib-backend.onrender.com/borrowed/delbook`, {
         data: { uucms, title },
       })
       .then((res) => {
@@ -48,7 +48,7 @@ export default function Student() {
 
   const handlerenew = async (uucms, title) => {
     await axios
-      .delete(`${process.env.REACT_APP_BASE_URL}/borrowed/renewbook`, {
+      .delete(`https://infolib-backend.onrender.com/borrowed/renewbook`, {
         data: { uucms, title },
       })
       .then((res) => {

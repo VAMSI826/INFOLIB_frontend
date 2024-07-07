@@ -19,7 +19,7 @@ export default function Signup() {
       password: data.password,
     };
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/user/signup`, userInfo)
+      .post(`https://infolib-backend.onrender.com/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

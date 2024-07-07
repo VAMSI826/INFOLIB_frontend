@@ -17,7 +17,7 @@ export default function Studentadd() {
       semester: data.semester,
     };
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/Student/register`, studentInfo)
+      .post(`https://infolib-backend.onrender.com/Student/register`, studentInfo)
       .then((res) => {
         if (res.data) {
           toast.success(res.data.message);
