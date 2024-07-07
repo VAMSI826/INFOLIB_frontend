@@ -4,7 +4,6 @@ import Sidebar from "../../Sidebar/sidebar";
 import Box from "@mui/material/Box";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
 
 export default function Books() {
   const [search, setSearch] = useState("");
@@ -13,7 +12,7 @@ export default function Books() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get(`${process.env.base_url}/book/bookdetails`);
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/book/bookdetails`);
         setBook(res.data);
       } catch (error) {
         console.log(error);

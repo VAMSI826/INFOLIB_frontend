@@ -3,7 +3,6 @@ import "./borrowedbooks.css";
 import Sidebar from "../../Sidebar/sidebar";
 import Box from "@mui/material/Box";
 import axios from "axios";
-import dotenv from "dotenv";
 
 export default function Borrowedbooks() {
   const [search, setSearch] = useState("");
@@ -12,8 +11,8 @@ export default function Borrowedbooks() {
   useEffect(() => {
     const getBorrowed = async () => {
       try {
-        const res1 = await axios.get(`${process.env.base_url}/borrowed/getBorrow`);
-        const res2 = await axios.get(`${process.env.base_url}/book/bookdetails`);
+        const res1 = await axios.get(`${process.env.REACT_APP_BASE_URL}/borrowed/getBorrow`);
+        const res2 = await axios.get(`${process.env.REACT_APP_BASE_URL}/book/bookdetails`);
         setBorrowed(res1.data);
         setBook(res2.data);
       } catch (error) {

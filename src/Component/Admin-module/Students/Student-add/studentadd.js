@@ -5,7 +5,7 @@ import Sidebar from "../../Sidebar/sidebar";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
+
 
 export default function Studentadd() {
   const { register, handleSubmit, formState } = useForm();
@@ -17,7 +17,7 @@ export default function Studentadd() {
       semester: data.semester,
     };
     await axios
-      .post(`${process.env.base_url}/Student/register`, studentInfo)
+      .post(`${process.env.REACT_APP_BASE_URL}/Student/register`, studentInfo)
       .then((res) => {
         if (res.data) {
           toast.success(res.data.message);

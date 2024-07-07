@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Studsidebar from "../Sidebar/Studsidebar";
 import "./Notification.css";
 import axios from "axios";
-import dotenv from "dotenv";
+
 
 export default function Notification() {
   const [notification, setnotification] = useState([]);
@@ -11,7 +11,7 @@ export default function Notification() {
   useEffect(() => {
     const getnotification = async () => {
       try {
-        const res = await axios.get(`${process.env.base_url}/notif/getnotif`);
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/notif/getnotif`);
         setnotification(res.data.reverse());
         console.log(notification);
       } catch (error) {

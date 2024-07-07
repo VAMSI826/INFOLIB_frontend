@@ -5,7 +5,7 @@ import Sidebar from "../../Sidebar/sidebar";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
+
 
 export default function Bookadd() {
   const {
@@ -26,7 +26,7 @@ export default function Bookadd() {
       category: data.category,
     };
     await axios
-      .post(`${process.env.base_url}/book/addbook`, bookInfo)
+      .post(`${process.env.REACT_APP_BASE_URL}/book/addbook`, bookInfo)
       .then((res) => {
         if (res.data) {
           toast.success(res.data.message);

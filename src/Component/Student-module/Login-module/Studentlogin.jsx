@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
+
 
 const notify = () => toast("Here is your toast.");
 export default function Studentlogin() {
@@ -19,7 +19,7 @@ export default function Studentlogin() {
       password: data.password,
     };
     await axios
-      .post(`${process.env.base_url}/user/login`, userInfo)
+      .post(`${process.env.REACT_APP_BASE_URL}/user/login`, userInfo)
       .then((res) => {
         if (res.data) {
           toast.success("Login Successfull");

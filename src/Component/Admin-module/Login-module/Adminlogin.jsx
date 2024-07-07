@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import dotenv from "dotenv";
+
 
 export default function Adminlogin() {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function Adminlogin() {
       password: data.password,
     };
     await axios
-      .post(`${process.env.base_url}/Admin/Adminlogin`, admininfo)
+      .post(`${process.env.REACT_APP_BASE_URL}/Admin/Adminlogin`, admininfo)
       .then((res) => {
         if (res.data) {
           toast.success("Login Successfull");

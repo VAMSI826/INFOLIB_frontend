@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Toast } from "bootstrap";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
 
 export default function ForgotPassword() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -16,7 +15,7 @@ export default function ForgotPassword() {
 
   const onSubmitEmail = async (data) => {
     try {
-      const response = await axios.post(`${process.env.base_url}/api/auth/send-otp`, {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/auth/send-otp`, {
         email: data.email,
       });
       toast.success(response.data.message);
@@ -29,7 +28,7 @@ export default function ForgotPassword() {
 
   const onSubmitOTP = async (data) => {
     try {
-      const response = await axios.post(`${process.env.base_url}/api/auth/verify-otp`, {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/auth/verify-otp`, {
         email: data.email,
         otp: data.first + data.second + data.third + data.fourth,
       });
@@ -52,7 +51,7 @@ export default function ForgotPassword() {
         return;
       }
 
-      const response = await axios.post(`${process.env.base_url}/api/auth/reset-password`, {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/auth/reset-password`, {
         email: data.email,
         newPassword: data.newPassword,
         token: localStorage.getItem("resetToken"),
@@ -65,7 +64,7 @@ export default function ForgotPassword() {
   const handleResendOTP = async () => {
     try {
       const response = await axios.post(
-        `${process.env.base_url}/api/auth/send-otp`,
+        `${process.env.REACT_APP_BASE_URL}/api/auth/send-otp`,
         {
           email: email,
         }

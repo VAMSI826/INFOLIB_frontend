@@ -3,7 +3,6 @@ import "./signup.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv"
 
 export default function Signup() {
   const { register, handleSubmit } = useForm();
@@ -20,7 +19,7 @@ export default function Signup() {
       password: data.password,
     };
     await axios
-      .post(`${process.env.base_url}/user/signup`, userInfo)
+      .post(`${process.env.REACT_APP_BASE_URL}/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

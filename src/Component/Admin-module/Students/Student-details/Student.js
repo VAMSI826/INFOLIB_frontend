@@ -4,7 +4,7 @@ import Sidebar from "../../Sidebar/sidebar";
 import Box from "@mui/material/Box";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
+
 
 export default function Student() {
   const [search, setSearch] = useState("");
@@ -13,9 +13,9 @@ export default function Student() {
   useEffect(() => {
     const getStud = async () => {
       try {
-        const res1 = await axios.get(`${process.env.base_url}/user/getStud`);
+        const res1 = await axios.get(`${process.env.REACT_APP_BASE_URL}/user/getStud`);
         setStudent(res1.data);
-        const res2 = await axios.get(`${process.env.base_url}/borrowed/getBorrow`);
+        const res2 = await axios.get(`${process.env.REACT_APP_BASE_URL}/borrowed/getBorrow`);
         setBorrowed(res2.data);
       } catch (error) {
         console.log(error);
@@ -32,7 +32,7 @@ export default function Student() {
   });
   const handleDelete = async (uucms, title) => {
     await axios
-      .delete(`${process.env.base_url}/borrowed/delbook`, {
+      .delete(`${process.env.REACT_APP_BASE_URL}/borrowed/delbook`, {
         data: { uucms, title },
       })
       .then((res) => {
@@ -48,7 +48,7 @@ export default function Student() {
 
   const handlerenew = async (uucms, title) => {
     await axios
-      .delete(`${process.env.base_url}/borrowed/renewbook`, {
+      .delete(`${process.env.REACT_APP_BASE_URL}/borrowed/renewbook`, {
         data: { uucms, title },
       })
       .then((res) => {

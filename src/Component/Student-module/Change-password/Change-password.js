@@ -5,7 +5,7 @@ import Studsidebar from "../Sidebar/Studsidebar";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
+
 
 export default function Changepassword() {
   const [status1, setStatus1] = useState(false);
@@ -29,7 +29,7 @@ export default function Changepassword() {
     };
     console.log(userInfo);
     await axios
-      .post(`${process.env.base_url}/user/updatepass`, {
+      .post(`${process.env.REACT_APP_BASE_URL}/user/updatepass`, {
         data: userInfo,
       })
       .then((res) => {

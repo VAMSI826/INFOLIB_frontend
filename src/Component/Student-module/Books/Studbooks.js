@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Studsidebar from "../Sidebar/Studsidebar";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import dotenv from "dotenv";
+
 
 const data = localStorage.getItem("Users");
 console.log(data);
@@ -14,7 +14,7 @@ console.log(studata);
 
 const addSlot = async (uucms, barcode) => {
   await axios
-    .post(`${process.env.base_url}/slot/addslot`, {
+    .post(`${process.env.REACT_APP_BASE_URL}/slot/addslot`, {
       data: { uucms, barcode },
     })
     .then((res) => {
@@ -35,7 +35,7 @@ export default function StudBooks() {
   useEffect(() => {
     const getStudBook = async () => {
       try {
-        const res = await axios.get(`${process.env.base_url}/book/bookdetails`);
+        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/book/bookdetails`);
         setBookDetails(res.data);
       } catch (error) {
         console.log(error);
