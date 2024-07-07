@@ -6,7 +6,6 @@ import Studsidebar from "../Sidebar/Studsidebar";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
-
 const data = localStorage.getItem("Users");
 console.log(data);
 const studata = JSON.parse(data);
@@ -35,7 +34,9 @@ export default function StudBooks() {
   useEffect(() => {
     const getStudBook = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/book/bookdetails`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_BASE_URL}/book/bookdetails`
+        );
         setBookDetails(res.data);
       } catch (error) {
         console.log(error);
@@ -43,7 +44,7 @@ export default function StudBooks() {
     };
     getStudBook();
   }, []);
-
+  console.log("Base URL:", process.env.REACT_APP_BASE_URL);
   const filteredBooks = bookdetails.filter(
     (book) =>
       book.title.toLowerCase().includes(search.toLowerCase()) ||

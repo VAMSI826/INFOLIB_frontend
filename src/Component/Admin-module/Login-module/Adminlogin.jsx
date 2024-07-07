@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 
-
 export default function Adminlogin() {
   const navigate = useNavigate();
   const [status5, setStatus5] = useState(false);
@@ -24,7 +23,7 @@ export default function Adminlogin() {
       password: data.password,
     };
     await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/Admin/Adminlogin`, admininfo)
+      .post(`https://infolib-backend.onrender.com/Admin/Adminlogin`, admininfo)
       .then((res) => {
         if (res.data) {
           toast.success("Login Successfull");
