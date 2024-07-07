@@ -9,7 +9,7 @@ function FirstPage() {
     <div class="Container">
       <div className="first-half">
         <div className="logo-section">
-          <img src="https://surl.li/tnzda" class="logo"></img>
+          <img src="https://ibb.co/9w1hCWP" class="logo"></img>
           <h1 class="mt-5 title">INFOLIB</h1>
         </div>
         <div class="content mt-5">
@@ -35,7 +35,7 @@ function FirstPage() {
         </div>
       </div>
       <div className="second-half">
-        <img src="https://surl.li/tnzfq" class="right-image"></img>
+        <img src="https://ibb.co/VxgTyc9" class="right-image"></img>
       </div>
     </div>
   );

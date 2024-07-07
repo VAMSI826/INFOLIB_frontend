@@ -52,7 +52,7 @@ export default function Adminlogin() {
               <div class="card-body form-body p-xxl-5">
                 <div class="text-center mb-3">
                   <a href="#!">
-                    <img src="http://surl.li/tnzda" width="150" height="150" />
+                    <img src="https://ibb.co/9w1hCWP" width="150" height="150" />
                   </a>
                 </div>
                 <h2 class="fs-6 fw-normal text-center text-secondary mb-4">

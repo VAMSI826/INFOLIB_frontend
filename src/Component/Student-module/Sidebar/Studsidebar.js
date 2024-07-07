@@ -25,7 +25,7 @@ const Studsidebar = () => {
               className={`fas fa-bars ${show ? "fa-solid fa-xmark" : null}`}
             ></i>
             <img
-              src="https://surl.li/tnzda"
+              src="https://ibb.co/9w1hCWP"
               className="adminsidebar-logo"
             ></img>
             <p class="mt-1 sidebar-title">INFOLIB</p>

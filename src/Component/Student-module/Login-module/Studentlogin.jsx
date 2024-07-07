@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
-
 const notify = () => toast("Here is your toast.");
 export default function Studentlogin() {
   const navigate = useNavigate();
@@ -50,7 +49,11 @@ export default function Studentlogin() {
               <div class="card-body form-body ">
                 <div class="text-center mb-3">
                   <a href="#!">
-                    <img src="http://surl.li/tnzda" width="150" height="150" />
+                    <img
+                      src="https://ibb.co/9w1hCWP"
+                      width="150"
+                      height="150"
+                    />
                   </a>
                   <h2 class="fs-6  text-center mb-4 title-student ">INFOLIB</h2>
                 </div>
