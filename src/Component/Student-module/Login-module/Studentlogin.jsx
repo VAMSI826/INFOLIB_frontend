@@ -50,7 +50,7 @@ export default function Studentlogin() {
                 <div class="text-center mb-3">
                   <a href="#!">
                     <img
-                      src="https://ibb.co/9w1hCWP"
+                      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQMKwzp2krDtu-kCPe_UstrYpbU9LFLWBW6kTPU5lvJtuED0jucpFr3dbQUCEyKBEAYzUCgrtiiVKdSPmfaaVMNDKfFGvAq0wrZRAqPRtnhNnPYRi4UeSmxsdiRe68I2IwVzjfCLYqT6F6VgGqb-7VvOpJSCzE6_5ZCM4dv-3lgOCI4T7gpCCHI8jTAdpf/s1600/tree.png"
                       width="150"
                       height="150"
                     />

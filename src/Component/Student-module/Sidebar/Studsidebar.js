@@ -25,7 +25,7 @@ const Studsidebar = () => {
               className={`fas fa-bars ${show ? "fa-solid fa-xmark" : null}`}
             ></i>
             <img
-              src="https://ibb.co/9w1hCWP"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQMKwzp2krDtu-kCPe_UstrYpbU9LFLWBW6kTPU5lvJtuED0jucpFr3dbQUCEyKBEAYzUCgrtiiVKdSPmfaaVMNDKfFGvAq0wrZRAqPRtnhNnPYRi4UeSmxsdiRe68I2IwVzjfCLYqT6F6VgGqb-7VvOpJSCzE6_5ZCM4dv-3lgOCI4T7gpCCHI8jTAdpf/s1600/tree.png"
               className="adminsidebar-logo"
             ></img>
             <p class="mt-1 sidebar-title">INFOLIB</p>
