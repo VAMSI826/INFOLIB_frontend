@@ -25,7 +25,7 @@ const Sidebar = () => {
             <i
               className={`fas fa-bars ${show ? "fa-solid fa-xmark" : null}`}
             ></i>
-            <img src="http://surl.li/tnzda" className="adminsidebar-logo" />
+            <img src="https://surl.li/tnzda" className="adminsidebar-logo" />
             <p class="mt-1 sidebar-title">INFOLIB</p>
           </div>
         </div>
