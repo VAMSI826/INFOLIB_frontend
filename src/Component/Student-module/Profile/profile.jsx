@@ -107,6 +107,7 @@ export default function Profile() {
                     </div>
                   </div>
                 </div>
+
                 {studata.borrowedbookscnt === 0 ? (
                   <div
                     style={{ width: "80rem" }}
