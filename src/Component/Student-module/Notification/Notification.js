@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Studsidebar from "../Sidebar/Studsidebar";
 import "./Notification.css";
 import axios from "axios";
-import { base_url } from "../../../urls.js";
+import dotenv from "dotenv";
 
 export default function Notification() {
   const [notification, setnotification] = useState([]);

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Toast } from "bootstrap";
 import toast, { Toaster } from "react-hot-toast";
-import { base_url } from "../../../urls.js";
+import dotenv from "dotenv";
 
 export default function ForgotPassword() {
   const [currentStep, setCurrentStep] = useState(1);

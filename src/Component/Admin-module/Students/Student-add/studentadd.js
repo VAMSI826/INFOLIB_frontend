@@ -5,7 +5,7 @@ import Sidebar from "../../Sidebar/sidebar";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { base_url } from "../../../../urls.js";
+import dotenv from "dotenv";
 
 export default function Studentadd() {
   const { register, handleSubmit, formState } = useForm();

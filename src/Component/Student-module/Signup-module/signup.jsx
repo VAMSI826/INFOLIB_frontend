@@ -3,7 +3,7 @@ import "./signup.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import { base_url } from "../../../urls";
+import dotenv from "dotenv"
 
 export default function Signup() {
   const { register, handleSubmit } = useForm();
